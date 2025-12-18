@@ -69,6 +69,9 @@ class _SignLog extends State<SignLog> {
     if(res['success']==true){
 
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Login Successful')));
+      //merchantId
+      final int merchantId = res['id'];
+      print(merchantId);
       _clearFields();
     }
     else
