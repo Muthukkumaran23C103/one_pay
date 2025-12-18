@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:ui';
 import "package:one_pay/api/signlog_calls.dart";
 import 'package:flutter/material.dart';
+import 'package:one_pay/screens/home.dart';
 
 class SignLog extends StatefulWidget {
   @override
@@ -73,6 +74,8 @@ class _SignLog extends State<SignLog> {
       final int merchantId = res['id'];
       print(merchantId);
       _clearFields();
+
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>Home(merchantId: merchantId,)));
     }
     else
     {
