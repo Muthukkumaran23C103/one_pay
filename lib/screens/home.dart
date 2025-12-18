@@ -13,7 +13,7 @@ class _Home extends State<Home> {
 
       appBar: AppBar(
         title: Text('One Pay', style: TextStyle(color:
-        Colors.white),),
+        Colors.white, fontSize: 25),),
         backgroundColor: Colors.blue,
       ),
       drawer: Drawer(
