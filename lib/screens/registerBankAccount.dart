@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-//Widget with required id field
+//Widget call: RegisterBankAccount(merchantId: _)
 // ------------------- API Function -------------------
 Future<String> addMerchantBankAccount(
     int merchantId,
@@ -244,3 +244,4 @@ class _RegisterBankAccountState extends State<RegisterBankAccount> {
 void main() {
   runApp(MaterialApp(home: RegisterBankAccount(merchantId: 3)));
 }
+
