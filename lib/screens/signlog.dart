@@ -14,7 +14,7 @@ class _SignLog extends State<SignLog> with TickerProviderStateMixin {
   final _formKey = GlobalKey<FormState>();
   String? _autoLoginInput;
   // DEV / MOCK MODE
-  static const bool mockAuth = true;
+  static const bool mockAuth = false;
 
 // Fake credentials
   static const String mockLogin = "9999999999";

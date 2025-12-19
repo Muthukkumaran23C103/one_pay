@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:one_pay/screens/profile.dart';
 
 class Home extends StatefulWidget {
   final int merchantId;
@@ -168,51 +169,6 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Welcome Card
-          Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  Color(0xFF2196F3),
-                  Color(0xFF1976D2),
-                ],
-              ),
-              borderRadius: BorderRadius.circular(16),
-              boxShadow: [
-                BoxShadow(
-                  color: Color(0xFF2196F3).withOpacity(0.2),
-                  blurRadius: 16,
-                  offset: Offset(0, 4),
-                )
-              ],
-            ),
-            padding: EdgeInsets.all(24),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Welcome to OnePay',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 24,
-                    fontWeight: FontWeight.w700,
-                    letterSpacing: 0.5,
-                  ),
-                ),
-                SizedBox(height: 8),
-                Text(
-                  'Manage your business payments effortlessly',
-                  style: TextStyle(
-                    color: Colors.white.withOpacity(0.9),
-                    fontSize: 14,
-                    fontWeight: FontWeight.w400,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          SizedBox(height: 24),
-
           // Body Content
           Expanded(
             child: Center(
@@ -277,33 +233,10 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                         ),
                       ),
                     ] else if (_currentIndex == 2) ...[
-                      Container(
-                        width: 120,
-                        height: 120,
-                        decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: [
-                              Color(0xFF2196F3).withOpacity(0.1),
-                              Color(0xFF1976D2).withOpacity(0.1),
-                            ],
-                          ),
-                          borderRadius: BorderRadius.circular(20),
+                      ProfilePage(
+                          merchantId: widget.merchantId,
                         ),
-                        child: Icon(
-                          Icons.person_outline,
-                          size: 60,
-                          color: Color(0xFF2196F3),
-                        ),
-                      ),
-                      SizedBox(height: 16),
-                      Text(
-                        'Profile Screen',
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w600,
-                          color: Color(0xFF212121),
-                        ),
-                      ),
+
                     ]
                   ],
                 ),
